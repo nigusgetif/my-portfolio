@@ -1,0 +1,23 @@
+@media (max-width: 1024px) { /* Adjust this temporarily for testing */
+    .fa-bars {
+      display: block;
+    }
+    .nav-list {
+      display: none;
+    }
+    .nav-list.active {
+      display: flex;
+    }
+  }
+  .navbar {
+    border: 1px solid red;
+  }
+  
+  .nav-list {
+    border: 1px solid blue;
+  }
+  
+  .fa-bars {
+    border: 1px solid green;
+  }
+    
