@@ -1,1 +1,28 @@
-<p>contacts works!</p>
+<section id="contacts" class="section">
+    <h2>Contact Me</h2>
+    <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" class="contact-form">
+      <!-- Name -->
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="name" ngModel placeholder="Enter your name" required>
+      </mat-form-field>
+  
+      <!-- Email -->
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" ngModel placeholder="Enter your email" required>
+      </mat-form-field>
+  
+      <!-- Message -->
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Message</mat-label>
+        <textarea matInput rows="4" name="message" ngModel placeholder="Write your message here"></textarea>
+      </mat-form-field>
+  
+      <!-- Submit Button -->
+      <button mat-raised-button type="submit" [disabled]="!contactForm.form.valid" class="submit-btn">
+        <mat-icon>send</mat-icon> Send Message
+      </button>
+    </form>
+  </section>
+  

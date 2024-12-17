@@ -1,1 +1,70 @@
-<p>resume works!</p>
+<section id="resume" class="section">
+    <h2>Resume</h2>
+  
+    <div class="resume-content ">
+      <!-- Education Section -->
+      <div class="resume-section">
+        <mat-icon class="section-icon">school</mat-icon>
+        <h3>Education</h3>
+        <div class="resume-details">
+          <p><strong>{{ resumeData.education.degree }}</strong></p>
+          <p>{{ resumeData.education.university }}, {{ resumeData.education.year }}</p>
+        </div>
+      </div>
+  
+      <!-- Experience Section -->
+      <div class="resume-section">
+        <mat-icon class="section-icon">work</mat-icon>
+        <h3>Experience</h3>
+        <div *ngFor="let job of resumeData.experience" class="resume-details">
+          <p><strong>{{ job.role }}</strong> - {{ job.company }}</p>
+          <p>{{ job.duration }}</p>
+          <ul>
+            <li *ngFor="let task of job.tasks">{{ task }}</li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Skills Section -->
+      <div class="resume-section">
+        <mat-icon class="section-icon">code</mat-icon>
+        <h3>Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-item" *ngFor="let skill of resumeData.skills">
+            <p>{{ skill.name }}</p>
+            <mat-progress-bar  [value]="skill.level" ></mat-progress-bar>
+          </div>
+        </div>
+      </div>
+      <!--Extraccuriclum Activites-->
+     
+      <div class="resume-section">
+          <mat-icon class="section-icon">volunteer_activism</mat-icon>
+          <h3 >Extracurricular Activities</h3>
+        <ul class="activities-list">
+          <li *ngFor="let activity of resumeData.extracurricularActivities">
+            <h4 class="activity-title" >{{ activity.activity }}</h4>
+            <p class="activity-description">{{ activity.description }}</p>
+          </li>
+        </ul>
+      </div>
+      
+  
+      <!-- Certifications Section -->
+      <div class="resume-section">
+        <mat-icon class="section-icon">verified</mat-icon>
+        <h3>Certifications</h3>
+        <ul class="certifications-list">
+          <li *ngFor="let cert of resumeData.certifications">{{ cert }}</li>
+        </ul>
+      </div>
+  
+      <!-- Download Resume -->
+      <div class="download-resume">
+        <a href="assets/resume.pdf" target="_blank" mat-raised-button class="custom-download-button" >
+          <mat-icon>download</mat-icon> Download
+        </a>
+      </div>
+    </div>
+  </section>
+  

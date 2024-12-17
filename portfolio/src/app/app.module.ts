@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,9 +13,15 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { FooterComponent } from './footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import {MatIconModule} from '@angular/material/icon';
+import {MatIconModule, MatIconRegistry} from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { SkillsComponent } from './skills/skills.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,8 @@ import { MatButtonModule } from '@angular/material/button';
     ResumeComponent,
     ContactsComponent,
     FooterComponent,
-    NavbarComponent
+    NavbarComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +43,16 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     FontAwesomeModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatProgressBarModule,
+    MatFormFieldModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

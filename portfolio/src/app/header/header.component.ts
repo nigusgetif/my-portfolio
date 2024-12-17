@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faLinkedin, faGithub, faInstagram, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import { faAddressBook, faFileAlt,faProjectDiagram,faHome,faTools, faUser, faLightbulb, faBars} from '@fortawesome/free-solid-svg-icons';
 @Component({
@@ -7,6 +8,7 @@ import { faAddressBook, faFileAlt,faProjectDiagram,faHome,faTools, faUser, faLig
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  constructor(private router: Router) {}
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faInstagram = faInstagram;

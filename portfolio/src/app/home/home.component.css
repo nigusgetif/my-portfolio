@@ -1,8 +1,5 @@
-.section {
-    padding: 250px 0;
-    text-align: center;
-    background-color: rgb(249, 221, 187);
-  }
+
+  
   .background-image {
     background-color: #121722;
     background-size: cover; 
@@ -17,7 +14,7 @@
 .overlay-text {
   display: flex;
   position: relative; 
-  color: white; 
+  color: hsl(0, 0%, 100%); 
   text-align: center; 
   padding: 20px; 
   border-radius: 10px; 
@@ -46,65 +43,58 @@
   
 }
 
-
-#about-me {
-      display: flex;
-      max-width: 100%;
-      padding: 20px;
-      background: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-    }
-
-    #about-me:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
-
-    .photo {
-      padding: 10px;
-      text-align: center;
-    }
-
-    .photo img {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .info {
-        margin-left: 230px;
-        
-     
-    }
-
-    .personal-info {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px; 
-      margin-left: 230px;
-      text-align: start;
-    }
-
-    .personal-info p {
-      margin: 12px 0; 
-      color: #444;
-      font-size: 15px;
-      line-height: 1.4; 
-    }
-
-    .personal-info strong {
-      color: #007bff;
-    }
-
-    .personal-info a {
-      color: #007bff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .personal-info a:hover {
-      color: #0056b3;
+    /* Projects Section */
+    #projects {
+      padding: 40px 20px;
+      color: white;
+      
     }
     
+    #projects h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+#projects .projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid with responsive columns */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#projects .project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#projects .mat-card-header {
+  background-color: #3f51b5;
+  color: white;
+}
+
+#projects .mat-card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#projects .mat-card-content {
+  margin-top: 10px;
+}
+
+#projects .mat-card-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#projects .mat-card-actions button {
+  text-transform: none;
+}
+      
