@@ -16,10 +16,10 @@ export class ProjectsService {
       },
       {
         title: 'Product Manegement',
-        description: 'An e-commerce platform with user authentication and payment gateway An e-commerce platform with user authentication and payment gateway authentication and payment gateway',
+        description: 'This is a responsive and straightforward Angular application (built with TypeScript, CSS, and HTML) that primarily focuses on the fundamentals of routing and route navigation, enabling seamless page transitions for a basic product management system.',
         technologies: ['Angular', 'TypeScript', 'CSS'],
         screenshot: 'assets/images/project2.png',
-        githubLink: 'https://github.com/yourusername/ecommerce',
+        githubLink: 'https://github.com/nigusgetif/angular-product-management',
         liveDemo: 'https://ecommerce.com',
       },
       {
