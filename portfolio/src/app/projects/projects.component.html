@@ -16,10 +16,11 @@
         </div>
         <p>{{ project.description }}</p>
       </mat-card-content>
-      <mat-card-actions>
-        <a mat-button color="primary" *ngIf="project.githubLink" href="{{ project.githubLink }}" target="_blank">GitHub</a>
-        <a mat-button color="accent" *ngIf="project.liveDemo" href="{{ project.liveDemo }}" target="_blank">Live Demo</a>
+      <mat-card-actions class="matcardAction">
+        <a button mat-raised-button *ngIf="project.githubLink" href="{{ project.githubLink }}" target="_blank" class="githubBtn">
+          <mat-icon>code</mat-icon> Visit GitHub</a>
       </mat-card-actions>
+     
     </mat-card>
   </div>
 </section>

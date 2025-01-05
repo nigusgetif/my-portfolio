@@ -1,63 +1,117 @@
-
 #about-me {
-      display: flex;
-      max-width: 100%;
-      padding: 20px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      transition: transform 0.3s;
-      color: rgb(255, 255, 255);  
-      gap: 220px;
-  
-    }
+  display: flex;
+  max-width: 100%;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  color: rgb(255, 255, 255);
+  gap: 220px;
+}
 
-    .photo {
-      padding: 10px;
-      text-align: center;
-    }
+.photo {
+  padding: 10px;
+  text-align: center;
+}
 
-    .photo img {
-      max-width: 100%;
-      max-height: 500px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
+.photo img {
+  max-width: 100%;
+  max-height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-    .info {
-      text-align: center; 
-      margin-top: 20px;
-      margin-left: 90px;
-      display: flex; 
-      flex-direction: column; 
-      align-items: center; 
-      gap: 20px; 
-    }
-    .info h2{
-      margin-left: -450px;
-    }
-    .info p {
-      max-width: 600px; 
-      margin: 0 auto;
-    }
-    
-    .personal-info {
-      margin-top: 20px;
-      margin-left: -190px;
-      display: grid;
-      grid-template-columns: auto 1fr; 
-      row-gap: 10px; 
-      column-gap: 90px; 
-      text-align: left; 
-    }
-    .personal-info p {
-      margin: 0; 
-      display: contents; 
-    }    
-    .personal-info a {
-      color: #27E8FE;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.info {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
-    .personal-info a:hover {
-      color: #1c5491;
-    }
+.info h2 {
+  margin-left: -450px;
+}
+
+.info p {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.personal-info {
+  margin-top: 20px;
+  margin-left: -190px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  row-gap: 10px;
+  column-gap: 90px;
+  text-align: left;
+}
+
+.personal-info p {
+  margin: 0;
+  display: contents;
+}
+
+.personal-info a {
+  color: #27E8FE;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.personal-info a:hover {
+  color: #1c5491;
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  #about-me {
+    flex-direction: column; /* Stack items vertically */
+    gap: 40px;
+  }
+
+  .photo img {
+    max-width: 90%; /* Limit the image width to 90% of the container */
+    min-width: 150px; /* Prevent the image from shrinking too much */
+  }
+
+  .info {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .info h2 {
+    margin-left: 0;
+  }
+
+  .info p {
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .personal-info {
+    margin-left: 0;
+    grid-template-columns: 1fr; /* Stack the info in a single column */
+    column-gap: 20px;
+  }
+
+  .personal-info p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .photo img {
+    max-width: 100%;
+    min-width: 150px;
+  }
+
+  .info p {
+    font-size: 0.9em;
+  }
+
+  .personal-info p {
+    font-size: 0.9em;
+  }
+}

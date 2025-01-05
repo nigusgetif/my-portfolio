@@ -1,13 +1,28 @@
-<nav class="navbar">
-    <div class="navbar-brand">
-      <a href="#">My Brand</a>
-      <fa-icon [icon]="faBars" (click)="toggleMenu()"></fa-icon> 
-    </div>
-    <ul [ngClass]="{'active': menuOpen}" class="nav-list">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+<mat-toolbar class="navbar-toolbar">
+  <div class="toolbar-title">
+    <img src="assets/images/nigus.jpeg" alt="" style="width : 50px; height: 50px;">
+    <span class="name" style="color: white;">Nigus</span>
+  </div>
+  <fa-icon [icon]="faBars" class="menu-icon" (click)="toggleMenu()">
+  </fa-icon>
+
+  <div *ngIf="menuOpen" class="menu-overlay">
+    <button class="close-btn" (click)="toggleMenu()">×</button>
+
+    <ul class="menu-list">
+      <li><a href="#about-me"><fa-icon [icon]="faUser"></fa-icon> About Me</a></li>
+      <li><a href="#skills"><fa-icon [icon]="faLightbulb"></fa-icon> Skills</a></li>
+      <li><a href="#projects"><fa-icon [icon]="faProjectDiagram"></fa-icon> Projects</a></li>
+      <li><a href="#resume"><fa-icon [icon]="faFileAlt"></fa-icon> Resume</a></li>
+      <li><a href="#contacts"><fa-icon [icon]="faAddressBook"></fa-icon> Contacts</a></li>
     </ul>
-  </nav>
-  
+
+
+    <div class="social-icons">
+      <a href="https://linkedin.com/in/nigus-getie" target="_blank"><fa-icon [icon]="faLinkedin"></fa-icon></a>
+      <a href="https://github.com/nigusgetif" target="_blank"><fa-icon [icon]="faGithub"></fa-icon></a>
+      <a href="https://www.instagram.com/nigusgetie/" target="_blank"><fa-icon [icon]="faInstagram"></fa-icon></a>
+      <a href="https://x.com/nigus4825" target="_blank"><fa-icon [icon]="faTwitter"></fa-icon></a>
+    </div>
+  </div>
+</mat-toolbar>

@@ -20,8 +20,9 @@ import { MatCardModule } from '@angular/material/card';
 import { SkillsComponent } from './skills/skills.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
+import { MatInputModule} from '@angular/material/input'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactsComponent,
     FooterComponent,
     NavbarComponent,
-    SkillsComponent
+    SkillsComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -43,12 +45,14 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     FontAwesomeModule,
     MatIconModule,
+    MatInputModule,
     MatButtonModule,
     MatCardModule,
     MatProgressBarModule,
     MatFormFieldModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

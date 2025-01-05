@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faAddressBook, faBars, faFileAlt, faLightbulb, faProjectDiagram, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -8,10 +9,20 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 })
 export class NavbarComponent {
   faBars = faBars;
-  menuOpen = false; // State to track if the menu is open
+  faUser = faUser;
+  faLightbulb = faLightbulb;
+  faProjectDiagram = faProjectDiagram;
+  faFileAlt = faFileAlt;
+  faAddressBook = faAddressBook;
+  faLinkedin = faLinkedin;
+  faGithub = faGithub;
+  faInstagram = faInstagram;
+  faTwitter = faTwitter;
+
+  menuOpen = false;
 
   toggleMenu() {
-    this.menuOpen = !this.menuOpen; // Toggle menu state
+    this.menuOpen = !this.menuOpen;
   }
 
 }

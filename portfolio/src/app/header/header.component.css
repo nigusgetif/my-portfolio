@@ -1,12 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap */
+    background-color: #121722;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+
 .toolbar-title {
     display: flex;
+    align-items: center;
     gap: 10px;
+    margin-bottom: 10px; /* Ensure spacing in case of wrapping */
 }
 
 img {
     border-radius: 50%;
+    width: 40px;
+    height: 40px; /* Adjust size for better responsiveness */
 }
 
 .name {
@@ -16,69 +31,58 @@ img {
     -webkit-background-clip: text;
     color: transparent;
     animation: shimmer 3s ease-in-out infinite;
-    font-family: 'Pacifico', cursive;
     text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.3);
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .name:hover {
     color: rgb(12, 38, 77);
     transform: scale(1.1);
-    text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.3);
-
 }
-
 
 .nav-links {
     display: flex;
     gap: 10px;
-    margin-left: 500px;
-
-
+    flex-wrap: wrap; /* Ensure wrapping for small screens */
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto; /* Center align links */
 }
 
 .social-icons {
     display: flex;
-    gap: 15px;
-    margin-left: auto;
-
+    gap: 10px;
+    margin-top: 10px; /* Add spacing for wrapping */
 }
 
-mat-icon {
+mat-icon, fa-icon {
     font-size: 24px;
     color: white;
 }
 
 .custom-button {
-    padding: 20px 20px;
-    border-radius: 30px;
+    padding: 10px 15px;
+    border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 0.85em;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.85em;
-    border-bottom: solid 2px  #27E8FE;
-}
-
-.nav-links fa-icon {
-    padding: 0.15 0.25em;
+    border-bottom: solid 2px #27E8FE;
 }
 
 .custom-button:hover {
     background-color: #27E8FE;
     color: rgb(255, 255, 255);
     cursor: pointer;
-
 }
 
 .social-icons fa-icon {
-    color: rgb(56, 58, 60);
+    color: white;
     background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    padding: 0.25em;
+    padding: 5px;
     border-radius: 50%;
-    border-bottom: solid 2px #27E8FE;;
+    border-bottom: solid 2px #27E8FE;
 }
 
 .social-icons fa-icon:hover {
@@ -86,7 +90,27 @@ mat-icon {
     color: #27E8FE;
     cursor: pointer;
 }
-mat-toolbar{
-    background-color: #121722;
-    color: white;
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .toolbar-title img {
+        width: 30px;
+        height: 30px; /* Adjust logo size */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 5px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Center align social icons */
+    }
+
+    .custom-button {
+        padding: 8px 10px; /* Adjust padding for smaller screens */
+        font-size: 0.75em; /* Reduce font size */
+    }
 }
+
+

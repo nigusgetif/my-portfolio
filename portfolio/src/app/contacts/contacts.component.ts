@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { faLinkedin, faGithub, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faUser, faAddressBook, faFileAlt, faLightbulb, faProjectDiagram, faHome, faTools, faBars } from '@fortawesome/free-solid-svg-icons';
+import { ContactService } from '../services/contact.service';
 
 @Component({
   selector: 'app-contacts',
@@ -30,25 +31,24 @@ export class ContactsComponent {
       message: ''
     };
   
-    constructor(private http: HttpClient) {}
+    constructor(private contactService: ContactService, private http: HttpClient) {}
   
     sendEmail(contactForm: NgForm) {
-      this.http.post('http://localhost:3000/send-email', this.contact)
-        .subscribe({
-          next: (response) => {
-            console.log('Email sent:', response);
-            alert('Message sent successfully!');
-            
-          },
-          error: (error) => {
-            console.error('Error:', error);
-            alert('Failed to send the message. Please try again.');
-          }
-        });
-        
-        contactForm.reset();
+      if (contactForm.valid) {
+        this.contactService.sendContactForm(this.contact)
+          .subscribe({
+            next: (response: any) => {
+              console.log('Email sent:', response);
+              alert('Message sent successfully!');
+              contactForm.reset();
+            },
+            error: (error: any) => {
+              console.error('Error:', error);
+              alert('Failed to send the message. Please try again.');
+            }
+          });
+      }
     }
-  
     
 
 }

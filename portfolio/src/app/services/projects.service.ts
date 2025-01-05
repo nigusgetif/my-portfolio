@@ -12,7 +12,6 @@ export class ProjectsService {
         technologies: ['Angular', 'TypeScript', 'CSS'],
         screenshot: 'assets/images/project1.png',
         githubLink: 'https://github.com/nigusgetif/online-food-store',
-        liveDemo: 'https://yourportfolio.com',
       },
       {
         title: 'Product Manegement',
@@ -20,15 +19,6 @@ export class ProjectsService {
         technologies: ['Angular', 'TypeScript', 'CSS'],
         screenshot: 'assets/images/project2.png',
         githubLink: 'https://github.com/nigusgetif/angular-product-management',
-        liveDemo: 'https://ecommerce.com',
-      },
-      {
-        title: 'Chat Application',
-        description: 'A real-time chat application using WebSocket.An e-commerce platform with user authentication and payment gateway authentication and payment gatewayggggggggggggggg',
-        technologies: ['Angular', 'Spring Boot', 'WebSocket'],
-        screenshot: 'assets/images/project-one-screenshot.png',
-        githubLink: 'https://github.com/yourusername/chat-app',
-        liveDemo: null,
       },
      
    ];

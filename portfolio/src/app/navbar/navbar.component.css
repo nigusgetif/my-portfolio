@@ -1,23 +1,113 @@
-@media (max-width: 1024px) { /* Adjust this temporarily for testing */
-    .fa-bars {
-      display: block;
-    }
-    .nav-list {
-      display: none;
-    }
-    .nav-list.active {
-      display: flex;
-    }
-  }
-  .navbar {
-    border: 1px solid red;
-  }
-  
-  .nav-list {
-    border: 1px solid blue;
-  }
-  
-  .fa-bars {
-    border: 1px solid green;
-  }
-    
+
+.navbar-toolbar {
+  background-color: #121722;
+  color: white;
+  display: flex;
+  justify-content: space-between; 
+  padding: 10px 20px;
+  position: relative;
+  align-items: center;
+}
+
+.toolbar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start; 
+  margin-bottom: 0;
+}
+
+.name {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
+  background: linear-gradient(45deg, #1f3ef1, #062659);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+  text-shadow: 2px 2px 5px rgba(2, 2, 2, 0.3);
+  padding-top: 5px;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.menu-icon:hover {
+  transform: scale(1.2);
+}
+
+.menu-overlay {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  background-color: #1c2230;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  max-height: 300px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.close-btn {
+  font-size: 2rem;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-btn:hover {
+  color: #27E8FE;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+
+/* Menu Item Hover Effect */
+.menu-list li a:hover {
+  color: #27E8FE;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  justify-content: left;
+}
+
+.social-icons a fa-icon {
+  font-size: 1.2rem;
+  color: white;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a fa-icon:hover {
+  transform: scale(1.2);
+  color: #27E8FE;
+}
