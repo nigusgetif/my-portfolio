@@ -9,7 +9,7 @@
     flex-direction: column;
     gap: 20px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-    background-color: #1a202d;
+    background-color: #1c2334;
     padding: 30px;
     border-radius: 10px;
 }
@@ -60,3 +60,7 @@ mat-error {
         font-size: 14px;
     }
 }
+.form-field mat-label{
+    color: #9b9ea3 !important;
+}
+ 
