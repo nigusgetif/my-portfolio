@@ -22,12 +22,17 @@ export class HeaderComponent {
   faTools = faTools;
   status = false;
   faBars = faBars;
-addToggle()
-{
-  this.status = !this.status;       
-}
-  scrollToSection(sectionId: string): void {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+
+  navigateWithParam(section: string): void {
+    this.router.navigate([section]); 
+    this.scrollToSection(section);
+  }
+
+  scrollToSection(section: string): void {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
 }

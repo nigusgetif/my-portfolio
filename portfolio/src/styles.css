@@ -46,3 +46,10 @@ body{
   font-size: 16px;
   text-align: center;
 }
+
+.mat-mdc-snack-bar-container .mdc-snackbar__label {
+  background-color: rgb(76, 174, 79);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}

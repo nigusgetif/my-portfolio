@@ -3,7 +3,7 @@
   <form (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm" class="contact-form">
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Name</mat-label>
-      <input matInput type="text" name="name" [(ngModel)]="contact.name" placeholder="Enter your name" required>
+      <input matInput type="text" name="name" [(ngModel)]="contact.name" placeholder="Enter your name" required style="color: #ebedf0;">
       <mat-error *ngIf="contactForm.controls['name']?.invalid && contactForm.controls['name']?.touched">
         Name is required.
       </mat-error>
@@ -11,25 +11,26 @@
 
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Email</mat-label>
-      <input matInput type="email" name="email" [(ngModel)]="contact.email" placeholder="Enter your email" required
-        email>
-      <mat-error *ngIf="contactForm.controls['email']?.errors?.['required']">
-        Email is required.
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. kng@gmail.com" style="color: #ebedf0;">
+      
+      <mat-error *ngIf="emailFormControl.hasError('invalidEmailDomain')">
+        Please enter a valid email address with a correct domain (e.g., .com, .org).
       </mat-error>
-      <mat-error *ngIf="contactForm.controls['email']?.errors?.['email']">
-        Invalid email format.
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>.
       </mat-error>
+      
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="form-field">
       <mat-label>Message</mat-label>
       <textarea matInput rows="4" name="message" [(ngModel)]="contact.message" placeholder="Write your message here"
-        required></textarea>
+        required style="color: #ebedf0;"></textarea>
       <mat-error *ngIf="contactForm.controls['message']?.invalid && contactForm.controls['message']?.touched">
         Message is required.
       </mat-error>
     </mat-form-field>
-    <button mat-raised-button type="submit" [disabled]="!contactForm.form.valid" class="submit-btn">
+    <button mat-raised-button type="submit" [disabled]="!contactForm.form.valid || emailFormControl.invalid" class="submit-btn">
       <mat-icon>send</mat-icon> Send Message
     </button>
   </form>
