@@ -1,38 +1,40 @@
-
-html{
-  height:100%;
+html {
+  height: 100%;
 }
 
-body{
-  margin:0;
-  padding:0;
+body {
+  margin: 0;
+  padding: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 .section {
-    padding: 250px 0;
-    text-align: center;
-    background-color: #121722;
-  }
-  .section h2 {
-    position: relative;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-    color: hsl(0, 0%, 100%); 
-    
-  }
-  .section h2::after {
-    content: '';
-    display: block;
-    width: 50px; 
-    height: 4px; 
-    background-color:  #27E8FE; 
-    margin: 10px auto 0; 
-    border-radius: 2px; 
-  }
-  .success-snackbar {
+  padding: 250px 0;
+  text-align: center;
+  background-color: #121722;
+}
+
+.section h2 {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 100%);
+
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #27E8FE;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.success-snackbar {
   background-color: rgb(76, 174, 79);
   color: white;
   font-size: 16px;
@@ -41,15 +43,35 @@ body{
 
 
 .error-snackbar {
-  background-color: rgb(244, 67, 54); 
+  background-color: rgb(244, 67, 54);
   color: white;
   font-size: 16px;
   text-align: center;
 }
 
-.mat-mdc-snack-bar-container .mdc-snackbar__label {
-  background-color: rgb(76, 174, 79);
+.mat-mdc-snack-bar-container {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.success-snackbar {
+  background-color: #4caf50;
   color: white;
-  font-size: 16px;
-  text-align: center;
+  border-left: 5px solid #388e3c;
+}
+
+.error-snackbar {
+  background-color: #f44336;
+  color: white;
+  border-left: 5px solid #d32f2f;
+}
+
+.mat-mdc-snack-bar-action {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
 }
