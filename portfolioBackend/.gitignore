@@ -1,0 +1,39 @@
+# Node.js
+/node_modules/
+npm-debug.log
+yarn-error.log
+/package-lock.json
+/.env
+# .gitignore content
+
+
+# Logs
+*.log
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.idea/
+.vscode/
+.project
+.settings/
+
+# Miscellaneous
+/test/
+coverage/
+dist/
+
+# If you are using Docker, you may want to ignore the Docker-related files.
+.docker/
