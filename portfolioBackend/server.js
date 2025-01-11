@@ -1,13 +1,14 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Import the cors package
+const cors = require('cors');
 
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
+
 
 app.use(cors({
-  origin: 'http://localhost:4200',
+  origin: 'https://nigus-portfolio.netlify.app',
   methods: ['POST'],
   allowedHeaders: ['Content-Type'],
 }));
