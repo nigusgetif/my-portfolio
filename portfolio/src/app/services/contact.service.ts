@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ContactService {
 
-  private apiUrl = 'http://localhost:8080/api/send-email';
+  private apiUrl = 'https://my-portfolio-fz6o.onrender.com/api/send-email';
 
   constructor(private http: HttpClient) { }
 
